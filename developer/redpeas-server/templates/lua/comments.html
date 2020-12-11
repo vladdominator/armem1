@@ -1,0 +1,152 @@
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+       font-family: 'Montserrat', sans-serif;
+    }
+    img{
+   display: block;
+}
+    .caroosel__container{
+   display: flex;
+   max-width: 1920px;
+   margin: 0 auto;
+     margin-top: 10px;
+
+}
+.name{
+  font-weight: 700;
+  font-size: 25px;
+  margin-left: 10px;
+}
+.caroosel{
+   display: flex;
+ border-radius: 30px;
+   max-width: 700px;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   margin: 0 auto;
+   background-color: #F0EABB;
+    min-height: 250px;
+    padding: 10px 10px 10px 10px;
+}
+.caroosel__text{
+  max-width: 600px;
+  margin-top: 20px;
+  }
+.pref:hover, .next:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.pref:active, .next:active {
+  background: rgba(0, 0, 0, 0.6);
+}
+ .next {
+  margin-left: 20px;
+  border: 3px 0 0 3px;
+}
+.pref {
+  margin-right: 20px;
+}
+.pref,.next {
+  cursor: pointer;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  -webkit-transition: 0.6s ease-in-out;
+  -o-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+  border-radius: 0 3px 2px 0;
+}
+.wer{
+  display: flex;
+  align-items: center;
+}
+  </style>
+</head>
+<body>
+  <div class="caroosel__container">
+      <div class="caroosel">
+         <a class="pref" onclick="plusSlides(-1)">&#10094</a>
+         <div class="caroosel__item">
+          {% for key, value in pairs(items) do %}
+          <div class="wer">
+     <img src="img/Ellipse3.png">
+    <p class="name">{{value["name1"]}} </p>
+  </div>
+    <p align="justify" class="caroosel__text" >{{value["word1"]}}
+    </p>
+     {% end %}
+         </div>
+         <a class="next" onclick="plusSlides(1)">&#10095</a>
+      </div>
+      <div class="caroosel">
+         <a class="pref" onclick="plusSlides(-1)">&#10094</a>
+         <div class="caroosel__item">
+           {% for key, value in pairs(items) do %}
+              <div class="wer">
+     <img src="img/Ellipse4.png">
+    <p class="name">{{value["name2"]}} </p>
+  </div>
+    <p align="justify" class="caroosel__text">{{value["word2"]}}
+    </p>
+     {% end %}
+         </div>
+         <a class="next" onclick="plusSlides(1)">&#10095</a>
+      </div>
+      <div class="caroosel">
+         <a class="pref" onclick="plusSlides(-1)">&#10094</a>
+         <div class="caroosel__item">
+           {% for key, value in pairs(items) do %}
+              <div class="wer">
+     <img src="img/Ellipse5.png">
+    <p class="name">{{value["name3"]}} </p>
+  </div>
+    <p align="justify" class="caroosel__text">{{value["word3"]}}
+    </p>
+        {% end %}
+         </div>
+          <a class="next" onclick="plusSlides(1)">&#10095</a>
+     </div>
+        <div class="caroosel">
+         <a class="pref" onclick="plusSlides(-1)">&#10094</a>
+         <div class="caroosel__item">
+           {% for key, value in pairs(items) do %}
+              <div class="wer">
+     <img src="img/Ellipse3.png">
+    <p class="name">{{value["name4"]}} </p>
+  </div>
+    <p align="justify" class="caroosel__text">{{value["word4"]}}
+    </p>
+        {% end %}
+
+    </p>
+         </div>
+           <a class="next" onclick="plusSlides(1)">&#10095</a>
+     </div>
+         <div class="caroosel">
+         <a class="pref" onclick="plusSlides(-1)">&#10094</a>
+         <div class="caroosel__item">
+           {% for key, value in pairs(items) do %}
+              <div class="wer">
+     <img src="img/Ellipse4.png">
+    <p class="name">{{value["name5"]}} </p>
+  </div>
+    <p align="justify" class="caroosel__text">{{value["word5"]}}
+    </p>
+        {% end %}
+         </div>
+         <a class="next" onclick="plusSlides(1)">&#10095</a>
+      </div>
+   </div>
+</body>
+</html>
+    

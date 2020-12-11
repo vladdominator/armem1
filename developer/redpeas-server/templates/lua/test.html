@@ -1,0 +1,7 @@
+<div class="container__foods">
+   <div class="source__foods">
+	{% for key, value in pairs(items) do %}
+		<a class="foods"> <img {{value["src"]}} {{value["alt"]}}></a>
+   {% end %}
+</div>
+</div>

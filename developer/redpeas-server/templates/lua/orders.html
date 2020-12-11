@@ -1,0 +1,19 @@
+<div class="people__container">
+   <div class="source__name">
+	{% for key, value in pairs(items) do %}
+      <img src="{{value["image"]}}" class="people__image"> 
+     <p class="people__text"> {{value["name"]}}</p>
+   {% end %}
+</div>
+<div class="source__item">
+	{% for key, value in pairs(items) do %}
+     <p class="people__replace">
+        Ваш заказ:{{value["orders"]}}<br>
+        Цена заказа:${{value["coins1"]}}<br>
+        Ваша скидка:{{value["percent"]}}<br>
+        Цена со скидкой:${{value["coins2"]}}<br>
+     </p>
+     <button class="people__button"><a href="#" class="button__text">Оплатить</a></button>
+   {% end %}
+</div>
+</div>
